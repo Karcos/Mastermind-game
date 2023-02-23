@@ -61,6 +61,8 @@ class Game:
                 tmp_code = tmp_code[:i] + '!' + tmp_code[i+1:]
             elif tried_code_chr in tmp_code:
                 verdict_in_code += 1
+                tmp_index: int = tmp_code.find(tried_code_chr)
+                tmp_code = tmp_code[:tmp_index] + '!' + tmp_code[tmp_index+1:]
 
         if verdict_in_place == self.__digits_limit:
             print("You are the Winner! Good Job!")
@@ -150,7 +152,7 @@ class Generator:
                     rand_num = str(randint(0, 9))
 
             code += rand_num
-
+        print(code)
         return code
 
 
