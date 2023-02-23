@@ -152,7 +152,6 @@ class Generator:
                     rand_num = str(randint(0, 9))
 
             code += rand_num
-        print(code)
         return code
 
 
